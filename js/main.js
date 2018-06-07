@@ -368,10 +368,10 @@ const leaf = {
 		leafAnimationTimer = requestAnimationFrame(leaf.leafAnimation);
 	},
 }
-isMobilePhone();
-main.initBubble();
-main.music();
 
-bubbleImg.onload = () => {
+window.onload = () => {
+	isMobilePhone();
+	main.initBubble();
+	main.music();
 	main.bubbleAnimation();
 }
