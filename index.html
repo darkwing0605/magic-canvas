@@ -6,7 +6,6 @@
 	<title>Bubble Story</title>
 	<script>
 		const isWifi = () => {
-			console.log(navigator.connection.type)
 			if (navigator.connection.type !== 'wifi') {
 				let msg = '当前为非wifi环境，请确认是否继续';
 				if (confirm(msg) === true) {
