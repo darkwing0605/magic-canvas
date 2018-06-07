@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Bubble Story</title>
+	<script>
+		const isWifi = () => {
+			console.log(navigator.connection.type)
+			if (navigator.connection.type !== 'wifi') {
+				let msg = '当前为非wifi环境，请确认是否继续';
+				if (confirm(msg) === true) {
+					return;
+				} else {
+					window.location.href = 'about:blank';
+					window.close();
+				}
+			}
+		}
+		isWifi();
+	</script>
+	<link type="text/css" rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div id="logo">
+		<div class="heart"></div>
+	</div>
+	<section id="story">
+		<h1 class="story-title">Bubble Story</h1>
+		<p class="story-content">Love between us.</p>
+	</section>
+	<canvas id="canvas"></canvas>
+	<canvas id="canvas-star" class="additional-animation"></canvas>
+	<canvas id="canvas-leaf" class="additional-animation"></canvas>
+	<audio id="bg-music" src="./media/music.mp3" autoplay="autoplay" loop="loop"></audio>
+
+	<script src="./js/typed.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
